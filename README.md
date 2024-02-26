@@ -54,6 +54,7 @@ The attributes of this data set include:
 ### Summary of Findings
 
 ***Bar Coupons***
+
 Based on the observations, I hypothesize the following, about drivers who accepted the bar coupons
 * 40% of poeple who were offered bar coupons took it.
 * Accptance rate among people who went to the bar 3 or fewer times was at 37%, while among people who went to the bar more often only accepted at the rate of 76.8%.
@@ -64,6 +65,7 @@ Based on the observations, I hypothesize the following, about drivers who accept
 * Income does appear to make a difference. The fact that the individual is cost conscious and makes less income makes them less likely to accept the coupon.
 
 ***Coffee House Coupons***
+
 * 49.8% of people who were offered coffee house copuons took it.
 * People who visit 1-3 months accepted the coupon at the rate of 56.2%
 * People who visit <3 months (including never) accepted the coupon at the rate of 39%
