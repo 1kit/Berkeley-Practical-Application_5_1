@@ -53,6 +53,8 @@ The attributes of this data set include:
 
 ### Summary of Findings
 
+Jupyter notebook link => https://github.com/1kit/Berkeley-Practical-Application_5_1/blob/main/prompt.ipynb
+
 ***Bar Coupons***
 
 Based on the observations, I hypothesize the following, about drivers who accepted the bar coupons
