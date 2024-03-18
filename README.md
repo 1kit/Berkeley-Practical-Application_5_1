@@ -55,7 +55,28 @@ The attributes of this data set include:
 
 Jupyter notebook link => https://github.com/1kit/Berkeley-Practical-Application_5_1/blob/main/prompt.ipynb
 
-***Bar Coupons***
+### High Level Data Analysis
+1. To anyalize the data, the very first step was to clean the data.
+   - Eliminated duplicates
+   - Dropped the 'car' column as it had 99% data missing.
+   - The rest of the columns that had Nan values were converted to 'never'
+2. Use a bar plot to visualize the `coupon` column
+![newplot](https://github.com/1kit/Berkeley-Practical-Application_5_1/assets/11397575/80383dea-6f49-4c28-ba57-3d38e401cbf2)
+
+3. Use a histogram to visualize the temperature column
+![newplot6](https://github.com/1kit/Berkeley-Practical-Application_5_1/assets/11397575/ba77e61e-a64f-4de9-ae50-e55516d8800b)
+
+### Investigating the Bar Coupons
+Created a new `DataFrame` that contains just the bar coupons and then queried it based on the following :
+1. What proportion of bar coupons were accepted?
+2. Compare acceptance rate between those who went to a bar 3 or fewer times a month to those who went more
+3. Compare the acceptance rate between drivers who go to a bar more than once a month and are over the age of 25 to the all others. Is there a difference?
+4. Use the same process to compare the acceptance rate between drivers who go to bars more than once a month and had passengers that were not a kid and had occupations other than farming, fishing, or forestry.
+5. Compare the acceptance rates between those drivers who:
+   * go to bars more than once a month, had passengers that were not a kid, and were not widowed OR
+   * go to bars more than once a month and are under the age of 30 OR
+   * go to cheap restaurants more than 4 times a month and income is less than 50K
+  
 
 Based on the observations, I hypothesize the following, about drivers who accepted the bar coupons
 * 40% of poeple who were offered bar coupons took it.
@@ -66,14 +87,31 @@ Based on the observations, I hypothesize the following, about drivers who accept
 * The fact that kids are not present or the person is young (<30) does increase chances of accepting coupon.
 * Income does appear to make a difference. The fact that the individual is cost conscious and makes less income makes them less likely to accept the coupon.
 
-***Coffee House Coupons***
+### Investigating the Coffee House Coupons
+Created a new `DataFrame` that contains just the Coffee House coupons and then queried it based on the following:
+1. Find out what proportion of Coffee House coupons were accepted
+2. Lets try to find out what kind of user is more likely to accept the Coffee House coupon
 
-* 49.8% of people who were offered coffee house copuons took it.
-* People who visit 1-3 months accepted the coupon at the rate of 56.2%
-* People who visit <3 months (including never) accepted the coupon at the rate of 39%
-* People who visit >3 months accepted the coupon at the rate of 45.8%
+   Lets examine the bar chart colored by `Y`
+   ![newplot-coffee](https://github.com/1kit/Berkeley-Practical-Application_5_1/assets/11397575/2bdf2642-147c-411f-b7ee-bd6dc43bfc96)
 
-Very clearly, the following patterns emerge. People who fit into all of the following profiles are very likely to accept a coffee house coupon
-* People who have visited a coffee house between 1-3 times in the last month AND
-* People who are <30 years of age AND
-* People who are not headed to an urgent destination (not going to work or returning home)
+   * 49.8% of people who were offered coffee house copuons took it.
+
+3. For <3 Coffee House visits per month
+
+   * People who visit 1-3 months accepted the coupon at the rate of 56.2%
+   * People who visit <3 months (including never) accepted the coupon at the rate of 39%
+   * People who visit >3 months accepted the coupon at the rate of 45.8%
+
+4. More drill down
+   * How does age and destination affect acceptance of the coupon.
+   * Lets start with a filtered dataset where we have <3 visits to coffee house (but have visited atleast once)
+   Lets see the histogram based on age and color it based on destination
+
+   ![newplot-lt3data](https://github.com/1kit/Berkeley-Practical-Application_5_1/assets/11397575/57132077-9220-4ed2-a68c-5cbbec17cb9f)
+
+
+   Very clearly, the following patterns emerge. People who fit into all of the following profiles are very likely to accept a coffee house coupon
+   * People who have visited a coffee house between 1-3 times in the last month AND
+   * People who are <30 years of age AND
+   * People who are not headed to an urgent destination (not going to work or returning home)
